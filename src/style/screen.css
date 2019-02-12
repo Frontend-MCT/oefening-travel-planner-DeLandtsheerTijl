@@ -55,6 +55,11 @@ html{
 OBJECTS
 
 */
+.o-grid{
+    display: grid;
+    gap: calc(var(--gutter)*2);
+}
+
 /*
 
 COMPONENTS
@@ -64,34 +69,24 @@ COMPONENTS
 .c-menu__list{
 
 }
+
 .c-menu__item{
 
 }
+
 .c-menu__link{
 
 }
-.c-menu__item{
+
+.c-sidebar{
+    background-color: var(--color-beta);
+}
+
+.c-sidebar__header{
 
 }
-.c-menu__link{
 
-}
-.c-menu__item{
-
-}
-.c-menu__link{
-
-}
-.c-menu__item{
-
-}
-.c-menu__link{
-
-}
-.c-menu__item{
-
-}
-.c-menu__link{
+.c-sidebar__menu{
 
 }
 
@@ -100,6 +95,11 @@ COMPONENTS
 UTILITIES
 
 */
+
+.u-grid-main-layout{
+    grid-template-columns: 350px 1fr;
+}
+
 /*
 
 SETTINGS
