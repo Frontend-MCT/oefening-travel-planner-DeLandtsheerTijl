@@ -1,14 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Meta data -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Travel Planner - Organise your adventures</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <meta name="description" content="This website enables you to keep track of your adventurous life!">
+
+    <!-- Styles  (lijn kopiëren eronder is control+shift+D) -->
+    <link rel="stylesheet" type="text/css" media="screen" href="style/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style/screen.css" />
+
+    <!-- Scripts-->
+    <script src="script/app.js"></script>
 </head>
 <body>
-    
+    <!-- div.o-grid>aside.c-sidebar>nav.c-menu>ul.c-menu__list>li.c-menu__item*5>a.c-menu__link -->
+    <div class="o-grid u-grid-main-layout">
+        <aside class="c-sidebar__header">
+            <header>
+                <img src="" alt="">
+                <h1>Travel Planner</h1>
+            </header>
+            <nav class="c-sidebar__menu">
+                <ul class="c-menu__list">
+                    <!-- ctrl+shift+l na selecteren van verschillende lijnen-->
+                    <!-- control d om alle volgende geselecteerde text te selecteren (na één selectie)-->
+                    <li class="c-menu__item">
+                        <button class="c-menu__link">Africa</button>
+                    </li>
+                    <li class="c-menu__item">
+                        <button class="c-menu__link">Americas</button>
+                    </li>
+                    <li class="c-menu__item">
+                        <button class="c-menu__link">Asia</button>
+                    </li>
+                    <li class="c-menu__item">
+                        <button class="c-menu__link">Europe</button>
+                    </li>
+                    <li class="c-menu__item">
+                        <button class="c-menu__link">Oceania</button>
+                    </li>
+                </ul>
+            </nav>
+            <div class="c-sidebar__counter">
+                <span class="js-amount">18</span> /250
+            </div>
+        </aside>
+
+        <main class="c-content js-country-holder">
+            <!-- hier komt dynamische javascript -->
+        </main>
+    </div>
 </body>
 </html>
