@@ -1,10 +1,34 @@
+/*o-grid u-grid-main-layout
+c-sidebar__header
+c-sidebar__menu
+c-menu__list
+c-menu__item
+c-menu__link
+c-menu__item
+c-menu__link
+c-menu__item
+c-menu__link
+c-menu__item
+c-menu__link
+c-menu__item
+c-menu__link
+c-sidebar__counter
+js-amount
+c-content 
+js-country-holder
+*/
+
 /*
 
 SETTINGS
 
 */
 :root{
+    --color-alpha: #de4831;
+    --color-beta: #e1decb;
+    --color-dark: #221e21;
 
+    --gutter: 24px;
 }
 
 /*
@@ -12,8 +36,19 @@ SETTINGS
 ELEMENTS
 
 */
-body, html{
-
+body, 
+html{
+    /* Positioning */
+    /* Box Model */
+    /* Fonts */
+    font-family: 'Sarabun', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--color-dark);
+    /* Appearance */
+    /* Other styles */
+    /* ctrl+k+c */
+    /* ctrl+k+u is upper case en ctrl+k+l is lower case */
 }
 /*
 
@@ -25,6 +60,41 @@ OBJECTS
 COMPONENTS
 
 */
+
+.c-menu__list{
+
+}
+.c-menu__item{
+
+}
+.c-menu__link{
+
+}
+.c-menu__item{
+
+}
+.c-menu__link{
+
+}
+.c-menu__item{
+
+}
+.c-menu__link{
+
+}
+.c-menu__item{
+
+}
+.c-menu__link{
+
+}
+.c-menu__item{
+
+}
+.c-menu__link{
+
+}
+
 /*
 
 UTILITIES
