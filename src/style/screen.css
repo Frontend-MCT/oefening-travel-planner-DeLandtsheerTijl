@@ -1,3 +1,16 @@
+/*o-grid u-grid-overview js-country-holder">
+                ">  
+                    <input id="Bo-hide" type="checkbox"/>
+                    <label for="Bc-country js-country">
+                        <div vlass="c-country-header
+                            c-country-header__name
+                            c-country-header__flag
+                        c-country__native-name">Belhië</p>
+                    </label>
+                </article>
+           </div>
+           */
+
 /*
 
 SETTINGS
@@ -40,6 +53,17 @@ OBJECTS
     gap: calc(var(--gutter)*2);
 }
 
+.o-hide{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
 /*
 
 COMPONENTS
@@ -48,6 +72,8 @@ COMPONENTS
 
 .c-content{
     height: 100vh;
+    box-sizing: border-box;
+    padding: var(--gutter) calc(var(--gutter)*2) var(--gutter) 0;
     overflow-x: auto;
 }
 
@@ -126,6 +152,82 @@ COMPONENTS
     font-weight: 600;
 }
 
+.c-country{
+    opacity: 1;
+    display: block;
+}
+
+.c-country-input:checked + .c-country{
+    opacity: .6;
+}
+
+.c-country-header{
+    display: flex;
+    align-items: flex-start;
+}
+
+.c-country-header__name{
+    font-size: 1.2rem;
+    margin: 0 0 calc(var(--gutter)/2) 0;
+}
+
+.c-country-header__flag{
+    display: block;
+    height: calc(var(--gutter)/1.5);
+    margin-left: calc(var(--gutter)/2);
+    border-radius: 4px;
+}
+
+.c-country__native-name{
+    margin: 0;
+    opacity: .6;;
+}
+
+.c-notifications{
+    position: absolute;
+    bottom: 0;
+    right: calc(var(--gutter)*2);
+
+    width: 300px;
+}
+
+.c-notification{
+    margin: var(--gutter);
+    background-color: white;
+    border-radius: 8px;
+    height: 60px;
+    width: 250px;
+    padding: calc(var(--gutter) /2);
+    will-change: opacity;
+    opacity: 1;
+    box-shadow: 1px 1px 2px 1px rgba(30, 30, 30, .1);
+    transition: opacity 800ms ease-in-out;
+}
+
+.c-notification__header{
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.c-notification__action{
+    all: unset;
+
+    font-size: .9rem;
+    color: var(--color-alpha);
+    text-transform: uppercase;
+    text-decoration: underline;
+
+    cursor:pointer;
+    will-change: opacity;
+    opacity: 0.5;
+
+    transition: opacity 200ms ease-in-out;
+}
+
+.c-notification__action:hover{
+    opacity: 1;
+}
+
 /*
 
 UTILITIES
@@ -137,8 +239,16 @@ UTILITIES
     min-height: 100vh;
 }
 
+.u-grid-overview{
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
 .u-color-alpha{
     color: var(--color-alpha);
+}
+
+.u-fade-out{
+    opacity: 0;
 }
 
 /*
